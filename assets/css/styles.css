@@ -602,7 +602,6 @@ main {
   margin-bottom: 1rem;
 }
 
-
 /* .myswiper2 {
   
 } */
@@ -617,18 +616,19 @@ main {
 
 .services__carousel div[class^="bg-ico"] {
   position: absolute;
-  width:100%;
-  height:100%;
-  top:0px;
-  left:0px;
-  pointer-events:none;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
   background-color: transparent;
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-position: 10% center;
   background-size: 160px auto;
   z-index: -1;
-  filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(102%) contrast(102%);
+  filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(214deg)
+    brightness(102%) contrast(102%);
 }
 
 .services__carousel .bg-ico-branding {
@@ -648,24 +648,23 @@ main {
   padding-left: calc(10% + 170px);
   text-align: left;
   display: inline-block;
-  width:100%;
+  width: 100%;
 }
 
 .showcase_services {
-  background: #F39200;
+  background: #f39200;
   position: relative;
   z-index: 1;
 }
 
-.showcase_services::before
-{
+.showcase_services::before {
   content: "";
   display: block;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 0 100px 100vw;
-  border-color: transparent transparent #F39200 transparent;
+  border-color: transparent transparent #f39200 transparent;
   position: absolute;
   top: -100px;
   left: 0px;
@@ -678,7 +677,7 @@ main {
   height: 0;
   border-style: solid;
   border-width: 0px 100vw 100px 0;
-  border-color: transparent #F39200 transparent transparent;
+  border-color: transparent #f39200 transparent transparent;
   position: absolute;
   bottom: -100px;
 }
@@ -963,7 +962,6 @@ main {
   display: inline-block;
   margin-top: 5rem;
 }
-
 /* Styles for the tilt block */
 .tilt {
   display: block;
