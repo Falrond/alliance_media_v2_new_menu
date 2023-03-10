@@ -6,7 +6,8 @@
   --light-clr: #3d3d3d;
   --light-clr-2: rgba(0, 0, 0, 0.6);
   --light-clr-3: rgba(0, 0, 0, 0.6);
-  --body-bg-clr: #fff;
+  --body-bg-clr: #ffffff;
+  --body-bg-clr-2: #1F1B37;
   --dark-clr: #f6f6f6;
   --body-font-clr: rgba(0, 0, 0, 0.6);
   --bg-transparent: rgba(255, 255, 255, 0.8);
@@ -74,12 +75,13 @@ body {
 body.dark-theme {
   /* --------------------------------------------------------------------- */
 
-  --light-clr: #fff;
-  --light-clr-2: #bed2c9;
-  --light-clr-3: #e1e7dd;
-  --body-bg-clr: #222222;
+  --light-clr: #ffffff;
+  --light-clr-2: #ffffff;
+  --light-clr-3: #ffffff;
+  --body-bg-clr: #1F1B37;
+  --body-bg-clr-2: #0f0d1b;
   --dark-clr: #2e2e2e;
-  --body-font-clr: #bdbdbd;
+  --body-font-clr: #ffffff;
   --bg-transparent: rgba(46, 46, 46, 0.8);
   --box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
   --blob-gradient-1: rgba(243, 146, 0, 0.666);
@@ -184,7 +186,7 @@ button {
 }
 
 .btn--project.active {
-  border-bottom: 2px solid var(--light-clr-2);
+  border-bottom: 2px solid #F39200;
 }
 .close-menu-icon {
   display: none;
@@ -826,6 +828,13 @@ main {
   padding-bottom: 4rem;
   transition: 0.4s all;
   min-height: 950px;
+  position: relative;
+  background: var(--body-bg-clr-2);
+  overflow: hidden;
+}
+
+.projects  * {
+  color:#ffffff;
 }
 
 .projects__container {
@@ -906,9 +915,9 @@ main {
 /*! === FOOTER === */
 
 .footer {
-  background-color: var(--dark-clr);
   padding-top: 10rem;
   padding-bottom: 3rem;
+  min-height: 100vh;
 }
 
 .footer__group {
