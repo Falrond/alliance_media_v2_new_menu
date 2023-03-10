@@ -137,15 +137,15 @@ const bodyElement = document.body;
 const currentTheme = localStorage.getItem("currentTheme");
 const themeToggleBtns = document.querySelectorAll(".theme-toggle-btn");
 if (currentTheme) {
-  bodyElement.classList.add("light-theme");
+  bodyElement.classList.add("dark-theme");
 }
 console.log(themeToggleBtns);
 
 themeToggleBtns.forEach((themeToggleBtn) => {
   themeToggleBtn.addEventListener("click", () => {
-    bodyElement.classList.toggle("light-theme");
+    bodyElement.classList.toggle("dark-theme");
 
-    if (bodyElement.classList.contains("light-theme")) {
+    if (bodyElement.classList.contains("dark-theme")) {
       localStorage.setItem("currentTheme", "themeActive");
     } else {
       localStorage.removeItem("currentTheme");
