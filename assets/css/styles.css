@@ -571,7 +571,7 @@ main {
 
 .services {
   /* background-color: var(--dark-clr); */
-  padding-block: 7.4rem;
+  padding-top: calc(7.4rem + 100px);
 }
 
 .services__container {
