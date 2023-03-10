@@ -133,21 +133,24 @@ const swiper2 = new Swiper(".myswiper2", {
 // Switch theme/add to local storage
 
 const bodyElement = document.body;
-const themeToggleBtn = selectElement("#theme-toggle-btn");
+// const themeToggleBtn = selectElement("#theme-toggle-btn");
 const currentTheme = localStorage.getItem("currentTheme");
-
+const themeToggleBtns = document.querySelectorAll(".theme-toggle-btn");
 if (currentTheme) {
   bodyElement.classList.add("light-theme");
 }
+console.log(themeToggleBtns);
 
-themeToggleBtn.addEventListener("click", () => {
-  bodyElement.classList.toggle("light-theme");
+themeToggleBtns.forEach((themeToggleBtn) => {
+  themeToggleBtn.addEventListener("click", () => {
+    bodyElement.classList.toggle("light-theme");
 
-  if (bodyElement.classList.contains("light-theme")) {
-    localStorage.setItem("currentTheme", "themeActive");
-  } else {
-    localStorage.removeItem("currentTheme");
-  }
+    if (bodyElement.classList.contains("light-theme")) {
+      localStorage.setItem("currentTheme", "themeActive");
+    } else {
+      localStorage.removeItem("currentTheme");
+    }
+  });
 });
 
 // const letters = "ABCDEFGHIJKMNOPQRSTUVWXYZ";
