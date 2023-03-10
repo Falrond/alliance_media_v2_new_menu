@@ -394,6 +394,9 @@ button {
   height: 100vh;
   top: 0;
   left: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* left: 0; */
   /* top: 0; */
   /* top: -100vh; */
@@ -417,15 +420,15 @@ button {
 }
 
 .second-menu ul {
-  position: absolute;
-  left: 50%;
+  /* position: absolute; */
+  /* left: 50%; */
   list-style: none;
-  top: 20%;
+  /* top: 20%; */
   display: flex;
   height: 55%;
   flex-direction: column;
   justify-content: space-between;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
 }
 
 .nav-link {
@@ -455,8 +458,8 @@ button {
 
 .menu-close {
   position: absolute;
-  top: 5%;
-  right: 6%;
+  top: 4%;
+  right: 2%;
   width: 4rem;
   height: 2rem;
   cursor: pointer;
