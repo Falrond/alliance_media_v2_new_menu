@@ -59,7 +59,7 @@ const headerScroll = () => {
 // add secondLogo styles on scroll
 const logoScroll = () => {
   const sideLogo = document.querySelector(".navbar__side-logo");
-  window.scrollY >= 200
+  window.scrollY >= 100
     ? sideLogo.classList.add("active")
     : sideLogo.classList.remove("active");
 };
