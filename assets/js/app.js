@@ -240,7 +240,7 @@ const sr = ScrollReveal({
 });
 
 sr.reveal(
-  ".showcase__title,.showcase__title2, .navbar, .showcase__image, .section-metadata, .swiper",
+  ".showcase__title,.showcase__title2,  .showcase__image, .section-metadata, .swiper",
   {
     origin: "top",
     interval: 150,

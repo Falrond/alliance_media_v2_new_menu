@@ -63,12 +63,14 @@ class Particle {
 }
 
 function setDimentions() {
+  console.log(window.matchMedia(window.devicePixelRatio));
+  console.log(window.devicePixelRatio);
   particles = [];
 
   canvas.width = window.innerWidth * window.devicePixelRatio;
   canvas.height = window.innerHeight * window.devicePixelRatio;
-  //   canvas.style.width = "100%";
-  //   canvas.style.height = "100";
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
 
   let w = window.innerWidth;
   let particleTotal = w > 1000 ? 100 : 65;
@@ -93,3 +95,14 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
+window.addEventListener(
+  "load",
+  function () {
+    setTimeout(() => {
+      setDimentions();
+      animate();
+    });
+  },
+  50
+);
