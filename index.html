@@ -44,6 +44,26 @@
           class="navbar__logo-image light-logo"
         />
       </a>
+      <div class="navbar__btn-group">
+        <a href="#footer" class="btn btn--text btn--transparent contact-btn"
+          >Kontakt</a
+        >
+        <button class="btn place-items-center" id="theme-toggle-btn">
+          <i class="ri-sun-line sun-icon"></i>
+          <i class="ri-moon-line moon-icon"></i>
+        </button>
+        <!-- <button
+          class="btn place-items-center screen-lg-hidden menu-toggle-icon"
+          id="menu-toggler"
+        >
+          <i class="ri-menu-3-line open-menu-icon"></i>
+          <i class="ri-close-line close-menu-icon"></i>
+        </button> -->
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
     <!-- HEADER  -->
     <header class="header" id="header">
@@ -87,12 +107,12 @@
             <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
             <li><a href="#services" class="nav-link">Oferta</a></li>
             <li><a href="#about" class="nav-link">O nas</a></li>
+            <li><a href="#footer" class="nav-link">Kontakt</a></li>
           </ul>
         </div>
         <div class="navbar__btn-group">
-          <a
-            href="mailto:loremm@domain.com"
-            class="btn btn--text btn--transparent"
+          <!-- href="mailto:loremm@domain.com" -->
+          <a href="#footer" class="btn btn--text btn--transparent contact-btn"
             >Kontakt</a
           >
           <button class="btn place-items-center" id="theme-toggle-btn">
@@ -487,7 +507,7 @@
       </section> -->
     </main>
     <!-- footer -->
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer__container container">
         <div class="footer__group">
           <h2 class="footer__title title title--main">
@@ -530,7 +550,7 @@
             </li>
             <li class="footer__list-item">
               <a href="#" class="footer__list-link"
-                ><i class="ri-twitter-line"></i
+                ><i class="ri-mail-line"></i
               ></a>
             </li>
           </ul>
