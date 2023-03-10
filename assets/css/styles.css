@@ -687,7 +687,8 @@ main {
 /*! === PRICES === */
 
 .prices {
-  /* background-color: var(--dark-clr); */
+  position: relative;
+  z-index:2;
   padding-block: 7.4rem;
 }
 
@@ -830,11 +831,24 @@ main {
   min-height: 950px;
   position: relative;
   background: var(--body-bg-clr-2);
-  overflow: hidden;
+  z-index: 1;
 }
 
 .projects  * {
   color:#ffffff;
+}
+
+.projects::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100px 0 0 100vw;
+  border-color: transparent transparent transparent var(--body-bg-clr-2);
+  position: absolute;
+  top: -100px;
+  left: 0px;
 }
 
 .projects__container {
