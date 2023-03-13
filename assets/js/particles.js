@@ -94,7 +94,7 @@ function animate() {
 
   requestAnimationFrame(animate);
 }
-animate();
+// animate();
 
 window.addEventListener(
   "load",

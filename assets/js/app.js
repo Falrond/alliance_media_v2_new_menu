@@ -270,13 +270,16 @@ sr.reveal(".projects__container", {
 // ------------------------------------------------------------
 // second menu
 // ------------------------------------------------------------
-let menuToggle = document.querySelector(".menu-toggle");
+let menuToggles = document.querySelectorAll(".menu-toggle");
 let menuClose = document.querySelector(".menu-close");
 let menu = document.querySelector(".second-menu");
 
 let navLinks = Array.from(document.querySelectorAll(".nav-link"));
 
-menuToggle.addEventListener("click", openMenu);
+menuToggles.forEach((menuToggle) => {
+  menuToggle.addEventListener("click", openMenu);
+});
+
 menuClose.addEventListener("click", closeMenu);
 
 function openMenu() {
@@ -520,4 +523,104 @@ function handleMove(height, width, el, e) {
   el.style.transform = string;
 }
 
-/* Add listener for mouseout event, remove the rotation */
+// intersection observer
+
+const projectsSection = document.querySelector("#projects");
+const pricesSection = document.querySelector("#prices");
+
+const sideNavbar = document.querySelector(
+  ".navbar__side-logo .navbar__btn-group"
+);
+const sideLogo = document.querySelectorAll(
+  ".navbar__side-logo .navbar__logo .navbar__logo-image"
+);
+
+const observer = new IntersectionObserver(
+  function (entries, self) {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.boundingClientRect.top < 0) {
+        if (!entry.isIntersecting) {
+          console.log("na biały");
+
+          sideLogo[1].src = "./assets/images/AMP_logotyp_oko_White.svg";
+        } else {
+          sideLogo[1].src = "./assets/images/oko_kolor.svg";
+          console.log("na kolorowy");
+        }
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "-150px",
+    threshold: 0,
+  }
+);
+const observer2 = new IntersectionObserver(
+  function (entries, self) {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.boundingClientRect.top < 0) {
+        if (!entry.isIntersecting) {
+          sideLogo[1].src = "./assets/images/oko_kolor.svg";
+        } else {
+          sideLogo[1].src = "./assets/images/AMP_logotyp_oko_White.svg";
+        }
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "-50px",
+    threshold: 0,
+  }
+);
+
+const observer3 = new IntersectionObserver(
+  function (entries, self) {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.boundingClientRect.top < 0) {
+        if (!entry.isIntersecting) {
+          console.log("na biały");
+
+          sideNavbar.classList.add("active");
+        } else {
+          sideNavbar.classList.remove("active");
+          console.log("na kolorowy");
+        }
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "-70px",
+    threshold: 0,
+  }
+);
+const observer4 = new IntersectionObserver(
+  function (entries, self) {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.boundingClientRect.top < 0) {
+        if (!entry.isIntersecting) {
+          sideNavbar.classList.remove("active");
+        } else {
+          sideNavbar.classList.add("active");
+        }
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "-50px",
+    threshold: 0,
+  }
+);
+
+// observer.observe(projectsSection);
+observer.observe(pricesSection);
+observer2.observe(projectsSection);
+observer3.observe(pricesSection);
+observer4.observe(projectsSection);

@@ -7,7 +7,7 @@
   --light-clr-2: rgba(0, 0, 0, 0.6);
   --light-clr-3: rgba(0, 0, 0, 0.6);
   --body-bg-clr: #ffffff;
-  --body-bg-clr-2: #1F1B37;
+  --body-bg-clr-2: #1f1b37;
   --dark-clr: #f6f6f6;
   --body-font-clr: rgba(0, 0, 0, 0.6);
   --bg-transparent: rgba(255, 255, 255, 0.8);
@@ -78,7 +78,7 @@ body.dark-theme {
   --light-clr: #ffffff;
   --light-clr-2: #ffffff;
   --light-clr-3: #ffffff;
-  --body-bg-clr: #1F1B37;
+  --body-bg-clr: #1f1b37;
   --body-bg-clr-2: #0f0d1b;
   --dark-clr: #2e2e2e;
   --body-font-clr: #ffffff;
@@ -186,7 +186,7 @@ button {
 }
 
 .btn--project.active {
-  border-bottom: 2px solid #F39200;
+  border-bottom: 2px solid #f39200;
 }
 .close-menu-icon {
   display: none;
@@ -306,6 +306,17 @@ button {
   justify-content: space-between;
   align-items: center;
   z-index: 999;
+}
+
+.navbar__side-logo .navbar__btn-group.active .contact-btn {
+  color: #f6f6f6;
+  border-color: #f6f6f6;
+}
+.navbar__side-logo .navbar__btn-group.active .theme-toggle-btn i {
+  color: #f6f6f6;
+}
+.navbar__side-logo .navbar__btn-group.active .menu-toggle span {
+  background-color: #f6f6f6;
 }
 
 .contact-btn {
@@ -688,7 +699,7 @@ main {
 
 .prices {
   position: relative;
-  z-index:2;
+  z-index: 2;
   padding-block: 7.4rem;
 }
 
@@ -834,8 +845,8 @@ main {
   z-index: 1;
 }
 
-.projects  * {
-  color:#ffffff;
+.projects * {
+  color: #ffffff;
 }
 
 .projects::before {
