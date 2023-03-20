@@ -624,3 +624,10 @@ observer.observe(pricesSection);
 observer2.observe(projectsSection);
 observer3.observe(pricesSection);
 observer4.observe(projectsSection);
+
+
+function subtractYears(date, years) {
+  date.setFullYear(date.getFullYear() - years);
+
+  return date;
+}
