@@ -681,7 +681,7 @@ main {
   border-width: 0 0 100px 100vw;
   border-color: transparent transparent #f39200 transparent;
   position: absolute;
-  top: -100px;
+  top: -99px;
   left: 0px;
 }
 
@@ -694,7 +694,7 @@ main {
   border-width: 0px 100vw 100px 0;
   border-color: transparent #f39200 transparent transparent;
   position: absolute;
-  bottom: -100px;
+  bottom: -99px;
 }
 
 /*! === PRICES === */
@@ -928,7 +928,7 @@ main {
   border-width: 100px 0 0 100vw;
   border-color: transparent transparent transparent var(--body-bg-clr-2);
   position: absolute;
-  top: -100px;
+  top: -99px;
   left: 0px;
 }
 
@@ -941,7 +941,7 @@ main {
   border-width: 0px 100vw 50px 0vw;
   border-color: transparent var(--body-bg-clr-2) transparent transparent;
   position: absolute;
-  bottom: -50px;
+  bottom: -49px;
   left: 0px;
 }
 
@@ -971,6 +971,13 @@ main {
 .projects-wrapper img[data-img="1"]
 {
   animation: project-layout-scroll 4s alternate infinite;
+}
+
+.projects-wrapper img[data-img="3"] 
+{
+  object-position: top;
+  width: 250px;
+  margin: auto;
 }
 
 @keyframes project-layout-scroll {
